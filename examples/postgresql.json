@@ -1,0 +1,23 @@
+{
+  "db": {
+    "type": "postgres",
+    "connection": "user=postgres password=postgres host=192.168.111.10 port=5431 dbname=datahub sslmode=disable"
+  },
+  "routes": [
+    {
+      "method": "post",
+      "endpoint": "/poicount",
+      "query": [
+        "select count(1) from gzpoi where st_contains(st_geomfromtext(?,4326), smgeometry)",
+        "wkt"
+      ]
+    },
+    {
+      "method": "get",
+      "endpoint": "/overlay",
+      "query": [
+        "select count(1),a.smid geom from fwm2000_100w a left join public.\"ed2009\" b on a.geom && b.geom group by a.smid"
+      ]
+    }
+  ]
+}
