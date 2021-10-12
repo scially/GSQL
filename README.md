@@ -5,7 +5,7 @@
 
 这个仓库的目标是：
 
-1. 把SQL转换成REST服务，支持POST、GET等情况，支持跨域。
+1. 把SQL转换成REST服务，支持POST、GET等情况，支持跨域。  
 
 ## 安装
 
@@ -17,7 +17,7 @@ $ go build main/mian.go -o gsql
 
 ## 使用说明
 
-1、具体配置参考examples下的conf文件。
+1、具体配置参考examples下的conf文件。   
 2、数据库配置参考beego的ORM框架
 
 ## 示例
@@ -31,9 +31,10 @@ $ ./gsql -p 9000 -f ./examples/postgresql.conf
 
 - [resquel](https://github.com/formio/resquel) — Easily convert your SQL database into a REST API。
 
-## 维护者
 
-[@scially](https://github.com/scially)。
+## 反馈
+1. 有问题提出issue就行，不过不一定有能力修改  
+2. 害，代码水平就这样，这么多年，改不过来了。
 
 
 ## 使用许可
